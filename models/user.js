@@ -11,7 +11,9 @@
 // });
 // module.exports=User;
 
-module.exports = (sequelize, Sequelize) => {
+const { Commande } = require(".");
+
+module.exports = (sequelize, Sequelize , Commande) => {
     const User = sequelize.define("User", {
         firstName: {
         type: Sequelize.STRING
@@ -44,5 +46,7 @@ module.exports = (sequelize, Sequelize) => {
         type : Sequelize.STRING
       }
     });
+    User.hasMany(Commande);
+    Commande.belongsTo(User , {foreignKey : 'UserId'});
     return User;
   };

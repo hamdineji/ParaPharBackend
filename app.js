@@ -7,7 +7,8 @@ const db = require("./models");
 const cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-productsRouter = require('./routes/products')
+productsRouter = require('./routes/products');
+var commandeRouter = require("./routes/commande");
 var app = express();
 
 // view engine setup
@@ -35,6 +36,7 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter)
+app.use('/commande', commandeRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

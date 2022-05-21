@@ -11,7 +11,7 @@
 // });
 // module.exports=User;
 
-module.exports = (sequelize, Sequelize) => {
+module.exports = (sequelize, Sequelize , commande) => {
     const Product = sequelize.define("Product", {
         name: {
         type: Sequelize.STRING
