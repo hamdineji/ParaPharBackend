@@ -10,7 +10,7 @@ async function signIn (req , res){
       console.log("thisIs a user")
     const user = await db.User.findOne({where : {email : req.body.email }})
     console.log("user" , user.password)
-    // console.log("reeq" , req)
+   console.log("reeq" , req)
     if (user && user.password == req.body.password){
         console.log("catched");
       const token =  jwt.sign({id : user.id , email : user.email }, secret, { expiresIn: '365d'}) ;
