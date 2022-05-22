@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var service = require("../services/productsService")
 const middleware = require("../middleware/auth")
-router.post('/' ,middleware.authenticateToken, service.create);
-router.get('/', middleware.authenticateToken, service.getAllProducts );
+router.post('/' , service.create);
+router.get('/', service.getAllProducts );
+router.get('/:id',service.getById );
+router.put('/:id',service.updateById );
 module.exports = router;

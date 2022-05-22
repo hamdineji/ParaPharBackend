@@ -25,6 +25,9 @@ module.exports = (sequelize, Sequelize , commande) => {
       picture : {
         type : Sequelize.STRING
       },
+      qty : {
+        type : Sequelize.STRING
+      },
       availability : {
         type : Sequelize.BOOLEAN
       }
