@@ -14,7 +14,24 @@ async function signIn (req , res){
     if (user && user.password == req.body.password){
         console.log("catched");
       const token =  jwt.sign({id : user.id , email : user.email }, secret, { expiresIn: '365d'}) ;
-      res.json({token : token, role : "admin"})
+      res.json({token : token, role : "admin",user:user.id })
+    }
+  }  
+  catch (error){
+      console.log("error", error)
+    res.status(500).send(error);
+  }
+
+}
+async function getUser (req , res){
+  try {
+      console.log("thisIs a user",req.body)
+    const user = await db.User.findByPk(req.params.id)
+    console.log("user" , user)
+
+    if (user){
+  
+      res.json({user:user })
     }
   }  
   catch (error){
@@ -25,5 +42,6 @@ async function signIn (req , res){
 }
 module.exports= {
     signUp  ,
-    signIn
+    signIn,
+    getUser
 }

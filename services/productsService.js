@@ -2,6 +2,7 @@ const db = require("../models");
 const product = require("../models/product");
 
 function create(req, res){
+    console.log("req.body",req.body)
     db.Product.create(req.body);
     res.status(200).send("user created");
 }

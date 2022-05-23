@@ -14,7 +14,8 @@
   module.exports = {
     HOST: "localhost",
     USER: "postgres",
-    PASSWORD: "postgres",
+  /*   PASSWORD: "postgres", */
+    PASSWORD: "Azerty123+", 
     DB: "pfe_db",
     dialect: "postgres",
     synchronize: true,
