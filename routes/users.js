@@ -5,4 +5,8 @@ var service = require("../services/usersService")
 router.post('/',  service.signUp);
 router.post('/signIn' , service.signIn);
 router.get('/:id',  service.getUser);
+router.get('/', service.getAllUsers);
+router.put('/bloquer',service.bloquer );
+router.put('/debloquer',service.debloquer );
+
 module.exports = router;

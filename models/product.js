@@ -30,7 +30,14 @@ module.exports = (sequelize, Sequelize , commande) => {
       },
       availability : {
         type : Sequelize.BOOLEAN
+      },
+      categorie: {
+        type : Sequelize.STRING
+      } ,
+      SC : {
+        type : Sequelize.STRING
       }
+
     });
     return Product;
   };

@@ -44,6 +44,10 @@ module.exports = (sequelize, Sequelize , Commande) => {
       } ,
       password : {
         type : Sequelize.STRING
+      } ,
+      status : {
+        type : Sequelize.STRING ,
+        default : "OK"
       }
     });
     User.hasMany(Commande);
