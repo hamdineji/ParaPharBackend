@@ -14,6 +14,10 @@ async function getById ( req , res ){
     const product = await db.Product.findByPk(req.params.id);
     res.status(200).send(product);
 }
+async function getChecked ( req , res ){
+    const products = await db.Product.findAll({where : {checked : true}});
+    res.status(200).send(products);
+}
 async function updateById ( req , res ){
     const product = req.body;
     const newProduct =  await db.Product.findByPk(req.params.id);
@@ -25,5 +29,6 @@ module.exports= {
     create ,
     getAllProducts ,
     getById,
-    updateById
+    updateById,
+    getChecked
 }

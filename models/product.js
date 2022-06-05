@@ -36,6 +36,9 @@ module.exports = (sequelize, Sequelize , commande) => {
       } ,
       SC : {
         type : Sequelize.STRING
+      },
+      checked:{
+        type : Sequelize.BOOLEAN
       }
 
     });
