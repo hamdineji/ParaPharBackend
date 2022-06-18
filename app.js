@@ -11,6 +11,7 @@ productsRouter = require('./routes/products');
 var commandeRouter = require("./routes/commande");
 var categorieRouter = require("./routes/categories");
 var promotionRouter = require ("./routes/promotion");
+var homepic = require("./routes/pictures");
 var app = express();
 
 // view engine setup
@@ -41,6 +42,8 @@ app.use('/products', productsRouter)
 app.use('/commandes', commandeRouter);
 app.use('/categories', categorieRouter);
 app.use('/promotion',promotionRouter );
+app.use('/homepic',homepic );
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
