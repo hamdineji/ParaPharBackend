@@ -12,11 +12,11 @@
   //   "cache": true
   // }
   module.exports = {
-    HOST: "localhost",
-    USER: "postgres",
-    PASSWORD: "postgres", 
+    HOST: "ec2-34-247-172-149.eu-west-1.compute.amazonaws.com",
+    USER: "wfaifwxdiaicfs",
+    PASSWORD: "4b6420e2c194dbd48995877124050228274bed314c94eaed4feb848197a4a098", 
     // PASSWORD: "Azerty123+", 
-    DB: "pfe_db",
+    DB: "db03hqlvta5fli",
     dialect: "postgres",
     synchronize: true,
   };
